@@ -3,12 +3,13 @@ import styled from 'styled-components'
 import { mobile } from '../responsive'
 const Container=styled.div`
     width: 100vw;
-    height: 100vw;
+    height: 50vw;
     background:linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),#FF7F3F;
     display: flex;
     align-items: center;
     justify-content: center;
     background-size: cover;
+    ${mobile({height: "100vw"})}
  `
 const Wrapper=styled.div`
   width  : 25% ;

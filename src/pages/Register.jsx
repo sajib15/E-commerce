@@ -11,6 +11,7 @@ const Container=styled.div`
     align-items: center;
     justify-content: center;
     background-size: cover;
+    ${mobile({height: "100vw"})}
  `
 const Wrapper=styled.div`
   width  : 40% ;

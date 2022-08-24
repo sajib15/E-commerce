@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { mobile } from '../responsive'
-
+import {Link} from "react-router-dom"
 const Container=styled.div`
  flex: 1;
  margin: 3px;
@@ -33,17 +33,22 @@ const Title=styled.h1`
 const Button=styled.button`
  border: none;
  padding: 10px;
- background-color: white;
+ background-color:#FDEEDC;
  color: gray;
  cursor: pointer;
  font-weight: 600;
+ transition: 0.5s ease;
+ &:hover{
+    background-color:white;
+    font-size: 16px;
+ }
 `
 function CategoryItem({item}){
     return <Container>
         <Image src={item.img}/>
         <Info>
             <Title>{item.title}</Title>
-            <Button>SHOP NOW</Button>
+            <Link to="/ProductList"><Button>SHOP NOW</Button></Link>
         </Info>
     </Container>
 }

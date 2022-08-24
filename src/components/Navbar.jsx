@@ -2,7 +2,7 @@ import { Search ,ShoppingCartOutlined} from '@mui/icons-material';
 import { Badge } from '@mui/material';
 import React from 'react';
 import styled from "styled-components";
-
+import {Link} from "react-router-dom"
 import {mobile} from "../responsive"
 
 const Container = styled.div`
@@ -40,6 +40,7 @@ const SearchContainer =styled.div`
 
 const Input=styled.input`
 border: none;
+outline: none;
 ${mobile({width: "50px"})}
   
 `
@@ -62,9 +63,13 @@ const MenuItem =styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
+
   ${mobile({fontSize: "12px",marginLeft: "10px"})}
 `
-
+const linkstyle={
+  color:"black",
+  textDecoration:"none"
+}
 const Navbar = () => {
 
   return (
@@ -78,13 +83,13 @@ const Navbar = () => {
         </SearchContainer>
         
         </Left> 
-        <Center> <Logo>SAJIB.</Logo> </Center>
+        <Center> <Link style={linkstyle} to="/"><Logo>SAJIB.</Logo></Link></Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
+          <MenuItem><Link style={linkstyle} to="/Register">REGISTER</Link></MenuItem>
+          <MenuItem><Link style={linkstyle} to="/Login">SIGN IN</Link></MenuItem>
           <MenuItem>
           <Badge badgeContent={4} color="primary">
-            <ShoppingCartOutlined/>
+          <Link style={linkstyle} to="/Cart"><ShoppingCartOutlined/></Link>
           </Badge>
           </MenuItem>
         

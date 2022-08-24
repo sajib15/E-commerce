@@ -6,6 +6,7 @@ import Announcement from '../components/Announcement'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import { mobile } from '../responsive'
+import {Link} from "react-router-dom"
 const Container=styled.div`
     
 `
@@ -180,7 +181,7 @@ const Cart = () => {
         <Title>
         Your Cart
         </Title>
-        <Top><TopButton>CONTINUE SHOPPING</TopButton>
+        <Top><Link to="/ProductList"><TopButton>CONTINUE SHOPPING</TopButton></Link>
        <TopTexts>
          <TopText>Shopping Bag(2)</TopText>
          <TopText>Your Wishlist(0)</TopText>
